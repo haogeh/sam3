@@ -630,6 +630,7 @@ def build_sam3_image_model(
     # Load checkpoint if provided
     if checkpoint_path is not None:
         _load_checkpoint(model, checkpoint_path)
+        print('checkpoint: ',checkpoint_path)
 
     # Setup device and mode
     model = _setup_device_and_mode(model, device, eval_mode)
